@@ -4,31 +4,43 @@
     border: 0;
 }
 
-#main-container{   
-    height: auto;
-}
-#game-container{
-    display: flexbox;
-}
-
-#main-container #game-container{
-    height: 100%;
-    
- }
-/* .cards{
-    height: 45rem;
-} */
-
-
-.red, .blue{   
-    height: 19.9rem;
- }
-
-
-.red{
-    background-color: crimson;
+#main{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+        "h h"
+        "c c"
+        "f f";
+    height: 100vh;
 }
 
- .blue{
-     background-color: blue;
- }
+#main > header{
+    grid-area: h;
+    height: 33vh;
+    background-color: #E73939;
+}
+
+.cards .cardRed, .cardBlue{
+    width: 50vw;
+}
+
+.cards {
+    grid-area: c;
+    height: 34vh;
+    width: 100%;
+    display: flex;
+}
+
+.cards .cardRed{
+    background-color: #E73939;
+}
+
+.cards .cardBlue{
+    background-color: #2562AA;
+}
+
+#main > footer{
+    grid-area: f;
+    height: 33vh;
+    background-color: #2562AA;
+}
