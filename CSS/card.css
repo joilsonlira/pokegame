@@ -1,8 +1,39 @@
 /* Cards */
 .first-card, .second-card{
+    display: flex;
+    border:solid lightslategray .8rem ;
     border-radius: .8rem;
-    height: 19rem;
-    width: 16rem;
+    height: 16rem;
+    width: 11rem;
     margin: .9rem;
-    background-color: gray;
+    background-color: lightgray;
+    align-content: center;
+    font-family: 'Poppins', sans-serif;
+    padding: .8rem;
+}
+
+.inf{
+    display: flex;
+    align-items:flex-end;
+
+}
+
+.inf h2{
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin-right: .8rem;
+    padding: .2rem;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 2.1rem;
+    clip-path: circle();
+
+}
+
+.inf p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.7rem;
+    
 }
