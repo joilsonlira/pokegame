@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#main-container{   
+    height: auto;
+}
+#game-container{
+    display: flexbox;
+}
+
+#main-container #game-container{
+    height: 100%;
+    
+ }
+/* .cards{
+    height: 45rem;
+} */
+
+
+.red, .blue{   
+    height: 19.9rem;
+ }
+
+
+.red{
+    background-color: crimson;
+}
+
+ .blue{
+     background-color: blue;
+ }
