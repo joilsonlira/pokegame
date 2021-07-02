@@ -20,8 +20,17 @@
     background-color: #E73939;
 }
 
+#main > footer{
+    grid-area: f;
+    height: 33vh;
+    background-color: #2562AA;
+}
+
 .cards .cardRed, .cardBlue{
+    display: flex;
     width: 50vw;
+    align-items: center;
+    
 }
 
 .cards {
@@ -33,14 +42,12 @@
 
 .cards .cardRed{
     background-color: #E73939;
+    align-items: center;
+    
 }
 
 .cards .cardBlue{
     background-color: #2562AA;
-}
+    align-items: center;
 
-#main > footer{
-    grid-area: f;
-    height: 33vh;
-    background-color: #2562AA;
 }

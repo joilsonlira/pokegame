@@ -1,0 +1,8 @@
+/* Cards */
+.first-card, .second-card{
+    border-radius: .8rem;
+    height: 19rem;
+    width: 16rem;
+    margin: .9rem;
+    background-color: gray;
+}
