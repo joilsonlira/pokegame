@@ -21,10 +21,8 @@
 .inf h2{
     font-weight: 300;
     font-size: 1.4rem;
-    margin-right: .8rem;
     padding: .2rem;
     background-color: white;
-    border-radius: 50%;
     line-height: 2.1rem;
     clip-path: circle();
 
@@ -36,4 +34,8 @@
     font-size: 1.4rem;
     line-height: 2.7rem;
     
+}
+
+.first-card .inf h2,p{
+    align-items: flex-end;
 }
