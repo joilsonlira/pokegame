@@ -8,6 +8,8 @@
 :root{
     --player--red: #e73939;
     --player--blue: #2562aa;
+    --minor-space: .8rem;
+    --border--radius: .5rem;
 
 }
 /*  */
@@ -19,45 +21,82 @@
         "h h"
         "c c"
         "f f";
-    height: 100vh;
     background:linear-gradient(0deg, rgba(37, 98, 170, 1) 50%, rgba(231, 57, 57, 1) 50%);
 
 }
 
-#main > header{
+#main header{
+    display: flex;
     grid-area: h;
-    height: 27vh;
+    height: 32vh;
     background-color: var(--player--red);
 
 }
 
-#main > footer{
+#main footer{
+    display: flex;
     grid-area: f;
-    height: 27vh;
+    height: 32vh;
     background-color: var(--player--blue);
-
+    
 }
 
 .cards {
     display: flex;
     grid-area: c;
-    height: 46vh;
+    height: max(30vh, 38vh);
     width: 100%;
     
 }
-
 .cardRed, .cardBlue{
     display: flex;
-    width: 50vw;
+    width: 50%;
     
 }
 
-.cards .cardRed{
+.cardRed{
     background-color: var(--player--red);
-    
+    border-radius: 0 0 var(--border--radius) 0;
     
 }
 
-.cards .cardBlue{
+.cardBlue{
     background-color: var(--player--blue);
+    border-radius: var(--border--radius) 0 0 0;
+}
+
+
+/* ITENS */
+.player{
+    width: 50%;
+
+}
+
+.itens{
+    display: flex;
+    width: 50%;
+    
+}
+
+.item{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(255,255,255,.2);
+    margin: 0 .3rem 0 .3rem;
+    
+}
+
+.itens-first-player{
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 1.7rem;
+
+}
+
+.itens-second-player{
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1.7rem;
+    
 }
