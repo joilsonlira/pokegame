@@ -28,7 +28,7 @@
 #main header{
     display: flex;
     grid-area: h;
-    height: 32vh;
+    height: 31vh;
     background-color: var(--player--red);
 
 }
@@ -36,7 +36,7 @@
 #main footer{
     display: flex;
     grid-area: f;
-    height: 32vh;
+    height: 31vh;
     background-color: var(--player--blue);
     
 }
