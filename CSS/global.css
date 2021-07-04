@@ -1,9 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
     
 }
+
+/*  */
+:root{
+    --player--red: #e73939;
+    --player--blue: #2562aa;
+
+}
+/*  */
 
 #main{
     display: grid;
@@ -13,42 +20,44 @@
         "c c"
         "f f";
     height: 100vh;
+    background:linear-gradient(0deg, rgba(37, 98, 170, 1) 50%, rgba(231, 57, 57, 1) 50%);
+
 }
 
 #main > header{
     grid-area: h;
-    height: 32vh;
-    background-color: #E73939;
+    height: 27vh;
+    background-color: var(--player--red);
+
 }
 
 #main > footer{
     grid-area: f;
-    height: 32vh;
-    background-color: #2562AA;
-}
+    height: 27vh;
+    background-color: var(--player--blue);
 
-.cards .cardRed, .cardBlue{
-    display: flex;
-    width: 50vw;
-    align-items: center;
-    
 }
 
 .cards {
-    grid-area: c;
-    height: 36vh;
-    width: 100%;
     display: flex;
+    grid-area: c;
+    height: 46vh;
+    width: 100%;
+    
+}
+
+.cardRed, .cardBlue{
+    display: flex;
+    width: 50vw;
+    
 }
 
 .cards .cardRed{
-    background-color: #E73939;
-    align-items: center;
+    background-color: var(--player--red);
+    
     
 }
 
 .cards .cardBlue{
-    background-color: #2562AA;
-    align-items: center;
-
+    background-color: var(--player--blue);
 }
