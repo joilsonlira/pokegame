@@ -1,6 +1,65 @@
 *{
-		margin:0px;
-		padding:0px;
-		font-style: none;
-		list-style:none;
+	margin:0px;
+	padding:0px;
+	font-style: none;
+	list-style:none;
+}
+
+/* formato base Cardis */
+.card{
+	width:10rem;
+	height:15rem;
+	border-radius:0.5rem;
+	background-color:lightgray;
+}
+
+main{
+	display:grid;
+	grid-template-rows:5vh 85vh 10vh;
+	grid-template-areas:
+		'header header header'
+		'colection colection colection'
+		'footer footer footer'
+		;
+}
+
+main header{
+	grid-area:header;
+	background-color:gray;
+}
+
+.colection{
+	display:flex;
+	justify-content:center;
+	grid-area:colection;
+	background-color:darkgray;
+}
+.colection .cards_container{
+	display:grid;
+	grid-template-rows:20vh 80vh;
+	grid-template-areas:
+		'deck'
+		'pcdex'
+		;
+	width:60%;
+
+	background-color:red;
+}
+.cards_container .deck{
+	grid-area:deck;
+	background-color: aqua;
+}
+.cards_containeir .pcdex{
+	grid-area:pcdex;
+	background-color:withe;
+}
+.deck,.pcdex{
+	display:flex;
+	flex-wrap: wrap;
+	overflow-y:scroll;
+}
+
+main footer{
+	grid-area:footer;
+	background-color:gray;
 }
