@@ -5,3 +5,61 @@
 	font-style: none;
 	list-style:none;
 }
+
+/* main grid defition */
+body{
+	display: grid;
+	grid-template-rows: 3vh 87vh 10vh; /*header main footer*/
+	grid-template-areas:
+		'header'
+		'main'
+		'footer'
+	;
+}
+
+/* header section style */
+header{
+	grid-area: 'header';
+	background-color: #2F2F2F;
+}
+
+/* main section style */
+main{
+	grid-area: 'main';
+	background-color: #91C9BE;
+}
+
+	main .profile, .rewards{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	main .profile{
+		height: 3rem;
+		background-color: #454545;
+	}
+	main .rewards{
+		height: 3rem;
+	}
+	/* grid definition of section battlefield of section main */
+	main .battlefield{
+			display: grid;
+			grid-template-columns: auto auto auto;
+	}
+		.battlefield .ranks{
+			grid-area: 'ranks';
+		}	
+		.battlefield .fields{
+			grid-area: 'fields';
+			background-color: red;
+		}
+		.battlefield .news{
+			grid-area: 'news';
+		}
+
+/* footer section style */
+footer{
+	grid-area: 'footer';
+	background-color: #2F2F2F;
+}
+
