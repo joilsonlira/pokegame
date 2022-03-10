@@ -23,38 +23,146 @@ header{
 	background-color: #2F2F2F;
 }
 
-/* main section style */
+/* main section style and grid*/
 main{
+	display: grid;
 	grid-area: 'main';
+	grid-template-rows: 0.5fr 1fr 3.5fr 1fr;
+	grid-template-areas:
+		'profile'
+		'rewards'
+		'battlefield'
+		'booster'
+	;
 	background-color: #91C9BE;
 }
 
-	main .profile, .rewards{
+	.rewards, .boosters, footer{
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: center;
 	}
-	main .profile{
-		height: 3rem;
+	.profile{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		grid-area: 'profile';
 		background-color: #454545;
+		padding: 0.4rem;
 	}
-	main .rewards{
-		height: 3rem;
+		.profile .user, .user_title, .config{
+			height: 85%;
+			background-color: white;
+			border-radius: 0.5rem;
+		}
+		.profile .user, .config{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 4rem;
+		}
+		.profile .user_title{
+			width: 90%;
+			margin-left: 0.8rem;
+			margin-right: 0.8rem;
+		}
+
+	.rewards{
+		grid-area: 'rewards';
 	}
+		 .rewards .rewards_free, .rewards_per_score{
+			height: 85%;
+			width: 45%;
+			background-color: rgba(129, 143, 149, 0.6);
+			border: 2px solid #2C3D52;
+			border-radius: 1rem;
+		}
+
 	/* grid definition of section battlefield of section main */
-	main .battlefield{
-			display: grid;
-			grid-template-columns: auto auto auto;
+	.battlefield{
+		display: grid;
+		grid-area: 'battlefield';
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			'ranks fields news'
+		;
 	}
 		.battlefield .ranks{
 			grid-area: 'ranks';
 		}	
 		.battlefield .fields{
-			grid-area: 'fields';
-			background-color: red;
+			display: flex;
+			flex-direction: column;
 		}
+			.fields .arena, .action_button{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.fields .arena{
+				grid-area: 'arena';
+				height: 80%;
+			}
+			.fields .arena > img{
+				width: auto;
+			}
+			.fields .action_button{
+				height: 100%;
+				grid-area: 'action_button';
+			}
+			.fields .action_button > .btn_start, .btn_start_doubles{
+				margin: 0.5rem;
+				min-width: 10rem;
+				height: 80%;
+				border-radius: 1rem;
+				background-color: #E53232;
+			}
+			.fields .action_button > .btn_start_doubles{
+				background-color: #3e89f9;
+			}
+
 		.battlefield .news{
 			grid-area: 'news';
+		}
+
+	.boosters{
+		display: grid;
+		grid-area: 'boosters';
+		grid-template-columns: 1fr 0.5fr 1fr;
+		grid-template-areas:
+			'booster_group_first empty booster_group_second'
+		;
+	}
+		.boosters .booster_group_first, .empty, .booster_group_second{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100%;
+		}
+		.boosters .booster_group_first{
+			grid-area: 'booster_group_first';
+		}
+		.boosters .empty{
+			grid-area: 'empty';
+		}
+			.boosters .empty > img{
+				position: absolute;
+				max-width: 9rem;
+				margin-top: 3rem;
+			}
+		.boosters .booster_group_second{
+			grid-area: 'booster_group_second';
+		}
+		.booster_pack{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-width: 5.5rem;
+			height: 80%;
+			border: 2px solid black;
+			border-radius: 1rem;
+			background-color: rgba(89, 89, 89, 0.6);
 		}
 
 /* footer section style */
@@ -62,4 +170,41 @@ footer{
 	grid-area: 'footer';
 	background-color: #2F2F2F;
 }
+	footer .main_menu{
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		height: 100%;
+	}
+		.main_menu section{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 20%;
+		height: auto;
+		border: 0.1rem solid rgba(155, 155, 155, 1);
+		background-color: #1D1D1D;
+		}
+		.main_menu .battle{
+			width: 40%;
+			background-color: rgba(233, 63, 63, 1);
+			border: solid rgba(72, 72, 72, 1);
+		}
+			.main_menu .battle article{
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				text-align: center;
+				height: 100%;
+				width: 100%;
+				background-color: #E93F3F;
+			}
+			.battle article > h2{
+				color: white;
+			}
+			.battle article > img{
+				width: 80%;
+			}
+
+
 
