@@ -20,9 +20,68 @@ body{
 
 /* header section style */
 header{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	grid-area: 'header';
 	background-color: #2F2F2F;
 }
+	header .scores{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content:space-around;
+		width: 100%;
+		color: white;
+	}
+		.scores article{
+			display: flex;
+			align-items: center;
+			width: 25%;
+			/* background-color: aqua; */
+		}
+		.scores img{
+			position: absolute;
+			width: 100%;
+		}
+		.head{
+			position:absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 3vh;
+			width: 3vh;
+			transform: rotate(90deg);
+			clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+			background-color: coral;
+		}
+		.bar{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			/* margin-left: 2.5rem; */
+			width: 10rem;
+			height: 1rem;
+			border-radius:3rem;
+			border: 2px solid #2E8931;
+			background-color: #58D05C;
+		}
+		.scores h1{
+			font-weight: 900;
+			font-size: 1.2rem;
+			text-align: center;
+			transform: rotate(-90deg);
+		}
+		.scores .coin_head,.star_head{
+			clip-path: circle(50.0% at 50% 50%);
+			background-color: transparent;
+			color: #000;
+		}
+		.scores .star_head{
+			background-color: #2E8931;
+		}
+		
 
 /* main section style and grid*/
 main{
